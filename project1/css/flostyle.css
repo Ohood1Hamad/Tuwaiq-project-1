@@ -1,4 +1,7 @@
 
+html{
+    scroll-behavior: smooth;
+}
 *{
     margin: 0;
     padding: 0;
@@ -10,134 +13,8 @@
 }
 body{
     background-color:#F6F4F6!important;
-}
-header{
-    height: 100px;
-    background-color:#2d252d;
-}
-.inner-width{
-    max-width: 100px;
-    padding: 0 10px;
-    margin: auto;
-    float: left;
-    
-}
-h2 .logo {
-     align-content: center;
-     margin-top: auto;
-     padding: auto;
-     font-size:20 px;
-     background-color: #b4a7b4;
-
-   
-
-}
-
-  
-
-.navigation-menu{
-float: left;
-display: flex;
-min-width: 50px;
-
-}
-.navigation-menu a{
-    margin-left: 10px;
-    color:#fff;
-    text-transform: uppercase;
-    font-size:16px ;
-    font-weight: bold;
-    padding: 4px 9px;
-    border-radius: 4px;
-    transition: 0.3px;
-    left: 50px;
-
-}
-.navigation-menu h1 .content {
-    margin-left: 10px;
-    color:#fff;
-    text-transform: uppercase;
-    font-size:16px ;
-    font-weight: bold;
-    padding: 4px 9px;
-    border-radius: 4px;
-    transition: 0.3px;
-    right: 100px;
-    left: 100px;
-}
-
-.mainHeading
-{
-    margin-left: 10px;
-    color:#fff;
-    text-transform: uppercase;
-    font-size:16px ;
-    font-weight: bold;
-    padding: 4px 9px;
-    border-radius: 4px;
-    transition: 0.3px;
-    right: 100px;
-    left: 100px;
-}
-.search-box{
-    position: absolute;
-    top: 50px;
-right: 50px; ;
- transform: translate(-50px , -50px);
- height: 40px;
- border-radius: 40px;
- padding: 10px;
-
-}
-
-.search-btn{
-    float: none;
-    color: #000;
-    border-radius: 50%;
-    background-color: #3c3248;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-
-}
-.search-text {
-    border: none;
-    outline: none;
-    background: none;
-    float: right;
+    margin: 0;
     padding: 0;
-    color:#F6F4F6 ;
-    font-size: 18px;
-    transition: 0.4s;
-    line-height: 40px;
-    width: 240px;
-    
-}
-.search-box :hover > .search-text{
-    width: 140px;
-    padding: 0 6px;
-}
-
-
-.navigation-menu a:hover{
-    background:#b4a7b4 ;
-    color:#3c3248;
-    transform: scale(1.1);
-}
-.navigation-menu i{
-    margin: 8px;
-    font-size: 19px;
-    color:#fff;
-
-}
-.munu-toggle-btn{
-    float: right;
-    height: 90px;
-    line-height: 90px !important;
-    font-size: 30px;
-    display: none !important;
-    cursor: pointer;
-
 }
 section{
    width: 100%;
@@ -145,12 +22,17 @@ section{
    background: url(bg.jpg) no-repeat;
    background-size:cover;
 }
-.gotopbtn {
-    padding:2px;
-    background-color:#3c3248 ;
-    color: #b4a7b4;
+.topBtn {
     bottom: 40px;
-
+    right: 50px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background-color:#3c3248 ;
+    color: #b4a7b4; 
 }
 
 
