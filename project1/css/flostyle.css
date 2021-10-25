@@ -12,7 +12,10 @@ html{
 
 }
 body{
-    background-color:#F6F4F6!important;
+    /* background-color:#F6F4F6!important; */
+    background-image: url("https://cdn.shopify.com/s/files/1/0569/7919/4048/products/CERCERA-92_540x.jpg?v=1626277603");
+   background-size: cover;
+   background-attachment: fixed;
     margin: 0;
     padding: 0;
 }
@@ -35,6 +38,39 @@ section{
     color: #b4a7b4; 
 }
 
+/* footer */
+footer{
+    background-color: #3c3248;
+    color: #b4a7b4;
+}
+    footer .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 2px;
+        padding: auto;
+        border: 10px;
+        font-size: large;
+    }
+       footer ul{
+            margin-bottom:34px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+       footer a li{
+            padding: 0 16px;
+            margin-bottom: 16px;
+            color: #b4a7b4;
+        }
+
+    footer :hover{
+        color: #b4a7b4;
+
+    }
+    
+
+    
+    
 
 @media screen and (max-width: 700px){
     .munu-toggle-btn{
