@@ -1,71 +1,49 @@
+$('#signupButon').click(function(){
+    let name = document.getElementById('name');
+    let pw = document.getElementById('pw');
+    let lowerCaseLetters = /[a-z]/g;
+    let upperCaseLetters = /[A-Z]/g;
+    let numbers = /[0-9]/g;
 
+    console.log("HELLO");
 
-let  username=document.querySelector("#signupUsername"); 
-let  email=document.querySelector("#email"); 
-let password=document.querySelector("#password"); 
-let createAccount=document.querySelector("#createAccount"); 
-let getuser=localStorage.getItem('user'); 
-let getpass=localStorage.getItem('password'); 
- 
-createAccount.addEventListener('click',function(){ 
-    
-    if(username.value === ""||password.value === ""){ 
-        alert("please enter your Data"); 
-        
-    }else if( (getuser.trim() ===  username.value.trim()) &&  (getpass.trim() === password.value.trim())){ 
-    
-setTimeout(()=>{ 
- 
-    window.location='prducte.html'; 
-    },1500) 
-     
-     
-     
- 
-      }else{ 
-          alert("user name or password is wrong"); 
-      } 
-         
-     
- 
-    });
+    if(name.value.length == 0){
+        alert('Please fill in email');
 
-function setFormeMessage(formElement,type,message) {
-    const messageElement =formElement.querySelector(".form--massage");
+    }else if(pw.value.length == 0){
+        alert('Please fill in password');
 
-  messageElement.textContent =massege;
-  messageElement.classList.remove("form--massage__success", "form--massage__error");
-  messageElement.classList.add("form--massage__${type}");
+    }else if(name.value.length == 0 && pw.value.length == 0){
+        alert('Please fill in email and password');
 
+    }else if(!pw.value.match(numbers)){
+        alert('please add 1 number');
+
+    }else if(!pw.value.match(upperCaseLetters)){
+        alert('please add 1 uppercase letter');
+
+    }else if(!pw.value.match(lowerCaseLetters)){
+        alert('please add 1 lovercase letter');
+
+    }else{
+        localStorage.setItem('name', name.value);
+        localStorage.setItem('pw', pw.value);
+        alert('Your account has been created');
+    }
 }
-function setInputError(inputElement, message) {
-    inputElement.classList.add("form--input__error");
-    inputElement.parentElement.querySelector(".form--input_error_massage").textContent=message;
-    
+)
+//checking
+function check(){
+    let storedName = localStorage.getItem('name');
+    let storedPw = localStorage.getItem('pw');
+
+    let userName = document.getElementById('userName');
+    let userPw = document.getElementById('userPw');
+
+    if(userName.value == storedName && userPw.value == storedPw){
+        console.log("passed");
+        window.location.href="./yoga.html";
+    }else{
+        alert('Error on login');
+    }
 }
-
-document.addEventListener("DOMContentLoaded",()=>{
-    const loginform = document.querySelector("#login");
-    const createAccountform = document.querySelector("#createAccount");
-
-   
-
-    });
-    document.querySelector("#linkLogin").addEventListener("click",  e => {
-        loginform.classList.remove("form--hidden");
-        createAccountform.classList.add("form--hidden");
-        e.preventDefault();
-
-
-    });
-   
-    document.querySelectorAll(".form--input").forEach(inputElement =>{
-        inputElement.addEventListener("blur",e => {
-            if (e.target.id === "signupUsername" && e.target.value.length > 0 && e.target.value.length <9){
-                setInputError(inputElement,"Username must be at least 9 characters in length");
-
-            }
-        })
-    })
-
-
