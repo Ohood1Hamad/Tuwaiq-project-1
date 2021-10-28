@@ -23,9 +23,8 @@ body {
     font:500 18px 'Candara',sans-serif;
 
 }
-form--hidden{
-    display: none;
-}
+
+
 .from > *:first-child{
     margin-top: 0;
 
@@ -67,10 +66,8 @@ form--hidden{
     transition: background 0.2s, border-color 0.2s;
 
 }
-.form--input:focus{
-    border-color:#3d3a41 ;
-    background: #ffffff;
-}
+
+
 .form--input__error{
     color: red;
     border-color: red;
