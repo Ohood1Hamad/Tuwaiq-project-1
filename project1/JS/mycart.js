@@ -2,7 +2,7 @@ let carts = document.querySelectorAll('.addtocart');
 
 let products = [{
         name: "Yellow Rose",
-        tag: "yellow Rose",
+        tag:  src="https://cdn.shopify.com/s/files/1/0569/7919/4048/products/CERCERA-83_540x.jpg?v=1626279233",
         price: 25,
         inCart: 0
     },
